@@ -11,7 +11,7 @@ public class SumOfDigi
             m = n % 10;
             sum = sum + m;
             n = n / 10;
-            m = sum + n;
+            m = sum + n; //bad code
         }
         Console.WriteLine("Sum is= " + sum);
         Console.WriteLine("I hope this works :)");

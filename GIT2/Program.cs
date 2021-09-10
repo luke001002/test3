@@ -1,19 +1,21 @@
 ﻿using System;
-public class SumOfDigi
+public class ConversionExample
 {
     public static void Main(string[] args)
     {
-        int n, sum = 0, m;
-        Console.Write("Enter a number: ");
+        int n, i;
+        int[] a = new int[10];
+        Console.Write("Enter the number to convert: ");
         n = int.Parse(Console.ReadLine());
-        while (n > 0)
+        for (i = 0; n > 0; i++)
         {
-            m = n % 10;
-            sum = sum + m;
-            n = n / 10;
-            m = sum + n; //bad code
+            a[i] = n % 2;
+            n = n / 2;
         }
-        Console.WriteLine("Sum is= " + sum);
-        Console.WriteLine("I hope this works :)");
+        Console.Write("Binary of the given number= ");
+        for (i = i - 1; i >= 0; i--)
+        {
+            Console.Write(a[i]);
+        }
     }
 }
